@@ -4,11 +4,13 @@ const { Query } = require("./resolvers/Query");
 const { Category } = require("./resolvers/Category");
 const { Product } = require("./resolvers/Product");
 const { categories, products, reviews } = require('./db')
+const {Mutation} = require('./resolvers/Mutation')
 
 const server = new ApolloServer({
   typeDefs,
   resolvers: {
     Query,
+    Mutation,
     Category,
     Product,
   },
